@@ -1,0 +1,1268 @@
+.b {
+  letter-spacing: -.4em;
+  font-size: 18px;
+  margin-bottom: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.btn {
+  background-color: #ffffff;
+  padding: 10px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  border-color: #658db4;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.btn:hover {
+  background-color: #dddddd;
+  color: #437ce6;
+}
+
+
+.capp {
+  border-radius: 5px;
+  background-color: lightblue;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.crec {
+  border-radius: 5px;
+  background-color: lightblue;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+
+.Search_For_Recruitment {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.Search_For_Recruitment form {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.keyword_input_form, .genre_select_form, .searchMethod_select_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.kensaku_btn {
+  align-self: center;
+}
+
+
+
+.apply_btn,
+.kensaku_btn {
+  border-radius: 5px;
+  background-color: #337ab7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+
+.apply_btn:hover,
+.kensaku_btn:hover {
+  background-color: #224f77;
+  color: white;
+}
+
+.reset_btn {
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+
+.reset_btn:hover {
+  background-color: lightgray;
+  color:white;
+}
+
+/*ここまでが募集を探すフォーム*/
+.Recruit {
+
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+
+/*以下、募集を行うフォームのスタイル*/
+.recruit_form {
+  display: flex;
+  justify-content: center;
+}
+
+
+/*ここまでが募集を行うフォームのスタイル*/
+
+
+
+/*募集内容を確認するスタイル*/
+.confirmRecruit {
+  text-align: center;
+}
+
+.confirmRecruit table {
+  margin: 0 auto;
+}
+
+.confirmRecruit th,
+.confirmRecruit td {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.confirmRecruit th {
+  background-color: lightgray;
+  width: 150px;
+  font-weight:  bold;
+}
+
+
+
+/*ここまでが募集内容を確認するスタイル*/
+
+/*募集確認フォーム(checkRecruit.php)のスタイル*/
+.checkRecruit {
+  display: flex;
+  /* flex-direction:column; */
+  border: none; /* 全体にボーダーをつけない */
+}
+
+.recruting_container {
+  background-color: #e8f4ff; /* 募集中の背景色 */
+  border-right: 5px solid white; /* 横並び時の右側ボーダー */
+  margin: 10px;
+  flex: 1; /* 同じ幅で調整 */
+}
+
+.end_recruit_container {
+  /* background-color: #fce5d5; 終了した募集の背景色 */
+  margin: 10px;
+  flex: 1; /* 同じ幅で調整 */
+}
+
+.recruiting, .end_recruit {
+  word-wrap: break-word;
+  border: 2px #658db449 solid;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+}
+
+.form_group {
+  display: flex;
+}
+
+.form_group .apply_btn {
+  margin: 0 10px; /* ボタンの余白調整 */
+}
+
+@media screen and (max-width: 768px) {
+  .checkRecruit {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recruting_container {
+    border-right: none; /* 横並び時の右ボーダーを消す */
+    border-bottom: 5px solid white; /* 縦並び時の下ボーダー */
+    width: 95%;
+  }
+
+  .end_recruit_container {
+    border-bottom: none; /* 最後の要素は下ボーダーを消す */
+    width: 95%;
+  }
+}
+
+/*ここまでが募集確認フォーム(checkRecruit.php)のスタイル*/
+
+
+
+/*ここからが応募確認フォーム(checkApplication.php)のスタイル*/
+.checkApplication {
+  display: flex;
+  border: none; /* 全体にはボーダーをつけない */
+}
+
+.waiting_for_approval_container {
+  /* background-color: #f8e6e0; 承認待ち用の背景色 */
+  border-right: 5px solid white; /* 横並び時の右側ボーダー */
+}
+
+.approval_container {
+  /* background-color: #e8f0e0; 承認済み用の背景色 */
+  border-right: 5px solid white; /* 横並び時の右側ボーダー */
+}
+
+.rejection_container {
+  /* background-color: #e0e8f8; 拒否用の背景色 */
+  /* 右ボーダーなし：最後の要素だから */
+}
+
+.waiting_for_approval_container, .approval_container, .rejection_container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  width: 33%; /* 横並び時の幅 */
+  padding: 10px; /* 内側の余白 */
+}
+
+.rejection, .waiting_for_approval, .approval {
+  word-wrap: break-word;
+  border: 2px #658db449 solid;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .checkApplication {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .waiting_for_approval_container,
+  .approval_container,
+  .rejection_container {
+    width: 95%; /* 縦並び時の幅調整 */
+    margin-bottom: 10px; /* 各コンテナ間のスペース */
+    border-right: none; /* 縦並び時は右ボーダーを削除 */
+    border-bottom: 5px solid white; /* 縦並び時に上下の区切りをつける */
+  }
+
+  .rejection_container {
+    border-bottom: none; /* 最後の要素は下ボーダーを消す */
+  }
+}
+
+/*ここまでが応募確認フォーム(checkApplication.php)のスタイル*/
+
+
+#buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#buttons>a {
+  display: inline-block;
+  width: 150px;
+  margin: 0 10px;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: lightblue;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+#title {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px 0;
+}
+
+#title h1 {
+  margin: 0;
+}
+
+#title a {
+  text-decoration: none;
+  color: black;
+}
+
+#content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  border: 2px #658db449 solid;
+}
+
+
+
+/**/
+
+
+/*以下、htmlヘッダ部分*/
+/*共通部分*/
+/* .header1, 
+.header2 {
+  position: fixed;
+  なぜか画面上に固定できない、、、
+} */
+
+
+.header1 ul,
+.header2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.header1 ul>li,
+.header2 ul>li {
+  display: inline-block;
+  /*横並び*/
+  position: relative;
+
+  font-weight: bold;
+}
+
+.header1 ul>li>a,
+.header2 ul>li>a {
+  padding: 15px 30px;
+  display: block;
+  font-size: 0.8em;
+  letter-spacing: .2em;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.header1 ul>li>span,
+.header2 ul>li>span {
+  margin-left: 1.2em;
+}
+
+.header1 ul>li>a:hover,
+.header2 ul>li>a:hover {
+  background-color: #dddddd;
+  color: #437ce6;
+  text-decoration: underline;  /*ホバー時にアンダーバーを表示*/
+  
+}
+
+/* デフォルトのスタイル */
+.header1 ul>li>a,
+.header2 ul>li>a {
+  padding: 15px 30px;
+}
+
+/* 画面幅が小さい場合のスタイル */
+@media (max-width: 600px) {
+
+  .header1 ul>li>a,
+  .header2 ul>li>a {
+    padding: 10px 15px;
+    /* パディングを減らす */
+    font-size: 0.7em;
+    /* フォントサイズを小さくする */
+  }
+}
+
+
+/*header1のスタイル*/
+.header1 {
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom:2px black solid; /*下に黒いボーダーを付ける*/
+}
+
+
+.header1 ul {
+  display: flex;
+  justify-content: space-between;
+  /* 左右に配置 */
+  align-items: center;
+  /* 縦方向の中央揃え */
+  padding: 0;
+  margin: 0;
+}
+
+
+.header1 .ConneCre {
+  /* margin-right: auto; */ 
+  /*左寄せ ↑を消すとなぜかmenuNameが真ん中に行ってくれる。*/
+
+  font-family: Century;
+}
+
+.header1 .notification,
+.header1 .myProfile,
+.header1 .setting {
+  margin-left: 15px;
+  /*右寄せ*/
+}
+
+
+/**header2のスタイル*/
+.header2 {
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  /*縦幅を固定*/
+  background-color: #ffffff;
+  border-bottom:1px black solid; /* 下に黒いボーダーを付ける*/
+}
+
+.header2 ul {
+  display: flex;
+  justify-content: space-between;
+  /* コンテナ内のアイテムを、左右に均等なスペースを保ちながら配置 */
+  align-items: center;
+  /* 縦方向の中央揃え */
+  padding: 0 10px;
+  /*左右に少し余白を追加*/
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.header2 ul>li {
+  flex-grow: 1;
+  /* 幅を均等に分配 */
+  flex-shrink: 1;
+  text-align: center;
+  /* 中央揃え */
+}
+
+.header2 ul>li>a {
+  /*ulの子供であるliのさらに子供のaにのみ適応される*/
+  padding: 0;
+  /* パディングをリセット */
+  display: block;
+  font-size: 0.8em;
+  letter-spacing: .2em;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  line-height: 50px;
+  /* 縦幅を一致させて縦中央揃え */
+
+  border-right: 1px black solid;
+}
+
+
+/*もしheader2にマウスが触れると*/
+.header2 ul>li>a:hover {
+  background-color: #dddddd;
+  color: #437ce6;
+}
+
+/*header2にマウスが触れられていない場合*/
+.header2 ul>li>ul {
+  display: none;
+}
+
+/*header2にマウスが触れた場合に展開される*/
+.header2 ul>li:hover >ul{
+  display: block;
+}
+
+
+/* 画面幅が600px以下の場合のスタイル */
+@media (max-width: 600px) {
+  .header2 ul>li>a {
+    font-size: 0.7em;
+    /* フォントサイズを小さくする */
+  }
+}
+
+.header2 ul li ul {
+  position: absolute;
+  top: 50px;
+  /*上部に50px(header2と同じ縦幅)を設定することで、header2のすぐ下にログアウトタグを出す*/
+  left: 0;
+  width: 100%;
+  /* 親要素(その他ボタン)と同じ幅にする */
+  display: none;
+  background-color: #ffffff;
+  /* 親要素と同じ背景色 */
+}
+
+.header2 ul li ul li {
+  display: block;
+  width: 100%;
+  /* 親要素と同じ幅にする */
+}
+
+.header2 ul li ul li a {
+  background-color: #ffffff;
+  color: black;
+}
+
+.header2 ul li ul li a:hover {
+  background-color: #dddddd;
+}
+
+
+/*ここまでがヘッダ*/
+
+/*body*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f4ff;
+  margin: 0;
+  padding: 0;
+}
+
+/*index.php*/
+/*募集が入った箱を入れるコンテナのデザイン*/
+.container {
+  display: flex;
+  margin: 20px;
+}
+
+/*募集を入れる箱のデザイン*/
+.Box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列レイアウト */
+  width: 100%; /*コンテナ全体を使う*/
+}
+
+/*募集1つ1つのデザイン*/
+.Recruitment {
+  margin: 20px 20px;
+  padding: 10px 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  line-break: anywhere;
+
+}
+
+/* メディアクエリで1列表示を設定（狭い画面用） */
+@media (max-width: 768px) {
+  .Box {
+    grid-template-columns: 1fr; /* 1列表示 */
+  }
+}
+
+
+
+/*モーダルウィンドウデザイン*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  line-break: anywhere;
+
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+
+/* 検索フォーム */
+/* 全体のデザイン */
+.searchForm {
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 40px); /* 両端にスペースを確保 */
+  box-sizing: border-box; /* paddingを含む幅の計算 */
+}
+
+/* フォーム内要素のデザイン */
+.searchForm form {
+  display: flex;
+  flex-wrap: wrap; /* 横幅が狭い場合に縦並びにする */
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ラベルのデザイン */
+.searchForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 入力欄のデザイン */
+
+.kensakubtnBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 検索ボタンの横幅調整 */
+.kensakubtnBox {
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end; /* ボタンを右寄せ */
+}
+
+.keyword_input,
+.select_genre {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* ボタンのデザイン */
+.kensaku_btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.kensaku_btn:hover {
+  background-color: #45a049;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .searchForm form {
+      flex-direction: column;
+      align-items: stretch;
+  }
+}
+/*以上がindex.phpのデザイン*/
+
+
+/*recruit.phpの入力フォームのデザイン*/
+.recruitFormBox {
+  margin: 20px auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* paddingを含む幅計算 */
+}
+
+/* フォーム要素 */
+.recruitForm .formGroup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ラベルのデザイン */
+.recruitForm .formGroup label {
+  flex: 1; /* 1:4の1部分 */
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+/* 入力欄とセレクトボックス */
+.recruitForm .formGroup input,
+.recruitForm .formGroup select,
+.recruitForm .formGroup textarea {
+    flex: 4; /* 1:4の4部分 */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+
+/* 入力フィールドのフォーカス時 */
+.recruitForm .formGroup input:focus,
+.recruitForm .formGroup textarea:focus,
+.recruitForm .formGroup select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* ボタンのグループ */
+.recruitForm .formButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+/* ボタンのデザイン */
+.recruitForm .reset_btn,
+.recruitForm .apply_btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* リセットボタン */
+.recruitForm .reset_btn {
+  background-color: #f44336;
+}
+
+.recruitForm .reset_btn:hover {
+  background-color: #d32f2f;
+}
+
+/* 確認ボタン */
+.recruitForm .apply_btn {
+  background-color: #4CAF50;
+}
+
+.recruitForm .apply_btn:hover {
+  background-color: #45a049;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .recruitForm .formGroup {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .recruitForm .formGroup label {
+      margin-right: 0;
+      margin-bottom: 5px;
+  }
+
+  .recruitForm .formButtons {
+      flex-direction: column;
+      align-items: stretch;
+  }
+}
+
+
+
+/*confirmRecruit.php*/
+.confirmRecruitBox {
+  margin: 20px auto;
+  padding: 30px;
+  width: 80%;
+  /* max-width: 800px; */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* paddingを含む幅計算 */
+}
+.confirmRecruitBox table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.confirmRecruitBox th, .confirmRecruitBox td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+  overflow: auto; /*文字列が長いときの折り返し設定*/
+}
+.confirmRecruitBox th {
+  width: 30%; /* 割合 */
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+.confirmRecruitBox td {
+  width: 70%;
+  border-bottom: 1px solid #ddd;
+}
+.confirmRecruitBox h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.apply_btn, .reset_btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.apply_btn {
+  background-color: #007bff;
+}
+.reset_btn {
+  background-color: #6c757d;
+}
+.apply_btn:hover, .reset_btn:hover {
+  opacity: 0.9;
+}
+
+.confirmRecruitBox .confirmButtons {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.confirmRecruitBox .confirmButtons .apply_btn {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .confirmRecruitBox .confirmButtons {
+    display: flex;
+  }
+}
+
+
+/* displayJamのデザイン */
+@media (min-width :768px) {
+  .keyword_input_form_jam {
+  width:400px
+  }
+}
+
+/* 以下の部分でアイコンの横にテキストを入れている */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profile-title {
+  margin: 0;
+}
+
+
+
+/*以下、checkJamのデザイン*/
+.checkJamContent {
+  grid-template-columns: 1fr; /*1列にする frを付けることで自動的に調整してくれる*/
+}
+
+.checkJamBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列レイアウト */
+  padding-bottom: 50px;
+}
+
+.toph2{
+  padding-left: 50px;
+}
+
+.bottomh2 {
+  padding-left: 30px;
+}
+
+.bottomh3 {
+  padding-left: 85px;
+}
+
+.checkJamFooter {
+  background-color: #f0f8ff; /* 任意の背景色を指定 */
+  padding: 20px; /* 少し余白をつける */
+}
+
+.twoBtnBox {
+  
+}
+
+@media (max-width:768px) {
+  .checkJamBox {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1列レイアウト */
+  }
+
+  .bottomh3 {
+    padding-left: 20px;
+  }
+}
+
+
+/*myJam.phpのデザイン*/
+.jamDetailsBox {
+  border: 2px #658db4 solid;
+  margin: 10px;
+  padding: 10px;
+}
+
+.applicantDetailsBox {
+  border: 2px #658db4 solid;
+  margin: 10px;
+  padding: 10px;
+}
+
+.endJamBox {
+  text-align: center;
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f0f0f0;
+}
+
+p.error {
+  color: red;
+}
+
+p.success {
+  color: green;
+}
+
+
+/*以下、displayChatRoomのデザイン*/
+.displayChatContent {
+  grid-template-columns: 1fr; /*1列にする frを付けることで自動的に調整してくれる*/
+}
+
+.displayChatBox {
+  grid-template-columns: 1fr; /*1列にする frを付けることで自動的に調整してくれる*/
+}
+
+.displayChatBox h4 {
+  padding-left: 20px;
+}
+
+
+/*recruitChatのデザイン*/
+/*自分のノートパソコン環境だとこれでいいが、他の画面に映すとずれる。*/
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 10px; /* 左右に余白を追加して端から離す */
+  box-sizing: border-box; /* パディングを含む幅調整 */
+}
+
+
+
+.chatMessage {
+  display: flex;
+  flex-direction: column; /*縦並び*/
+  align-items: flex-start; /* デフォルトは左寄せ */
+  padding: 10px 0; /* 上下に隙間を追加 */
+  margin-bottom: 25px; /* チャット間の隙間 */
+  /* padding-left: 30px; */
+  width:100%;
+}
+
+
+
+.myChatMessage {
+  align-items: flex-end; /* 自分のチャットを左寄せ */
+  /* padding-right: 30px; */
+}
+
+.chatSubItem {
+  display:flex;
+  padding-left:60px;
+}
+
+.IconAndContentBox {
+  display: flex; /*横並び*/
+  max-width: 50%; /* 親要素の半分までに制限 */
+}
+
+.chatContentBox {
+  margin-left:10px;
+  padding: 10px 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  line-break: anywhere;
+  word-wrap: break-word; /* 長い単語も折り返す */
+}
+
+/* チャット全体のスクロールエリア */
+#scroll-inner {
+  height: 70vh; /* ビューポート（画面）の高さの70% */
+  overflow-y: auto; /* 縦スクロールを有効化 */
+  padding: 10px;
+  /* box-sizing: border-box; */
+}
+
+.fixedForm {
+  text-align: center;
+  padding:10px 10px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  height: auto; /* 高さを自動調整 */
+}
+
+.fixedFormContentBox {
+  display: flex;
+}
+
+.chatMemberButton {
+  background-color: #ffffff;
+  padding: 10px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  border-color: #658db4;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatMemberButton:hover {
+  background-color: #dddddd;
+}
+
+.applicantContainer{
+  background-color:white;
+}
+
+.fixedForm .fixedTextForm {
+  width: 60%;
+  max-width: 600px;
+  padding: 12px; /* 縦方向の余白を増やして高さを調整 */
+  font-size: 16px; /* フォントサイズを調整 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* パディング込みで幅を計算 */
+}
+
+.fixedForm .fixedTextForm:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.fixedButton {
+  background-color: #4CAF50;
+  padding: 10px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fixedButton:hover {
+  background-color: #3a933d;
+}
+
+.modal-members {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.modal-member {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}
+
+
+/*jamApllyの入力フォームのデザイン*/
+.recruitForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* 各グループ間のスペースを調整 */
+}
+
+.jamFormGroup {
+  display: flex;
+  flex-wrap: wrap; /* 横幅が狭い場合は折り返し */
+  align-items: center;
+  gap: 20px; /* 各入力要素の間のスペースを調整 */
+}
+
+.jamFormGroup label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px; /* ラベルとフォームの間のスペース */
+}
+
+.jamFormGroup select,
+.jamFormGroup input[type="text"] {
+  flex: 1; /* 横並びで均等に配置 */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box; /* パディングを含む幅計算 */
+  max-width: 300px; /* フォームの最大幅を設定 */
+}
+
+.jamFormGroup select:focus,
+.jamFormGroup input[type="text"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* ボタンのグループ */
+.jamForm .formButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+/* ボタンのデザイン */
+.jamForm .formButtons .jamApplyBtn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.jamForm .formButtons .jamApplyBtn:hover {
+  background-color: #3a933d;
+}
+
+
+/*myProfileのデザイン*/
+.twoBtnBox {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+
+/*詳細ボタンのテスト*/
+/* .apply_btn {
+  color:#000;
+  border-radius: 5;
+  border: #000;
+}
+
+.apply_btn:hover {
+  color: white;
+  background-color: #000;
+} */
+
+
+/* recruitment div 内の a.btn-border に適用 */
+div.Recruitment a.btn-border {
+  position: relative; /* 擬似要素を使用するために必要 */
+  display: inline-block;
+  padding: 10px 20px; /* ボタン内の余白調整 */
+  text-decoration: none; /* 下線を削除 */
+  color: #000; /* テキストカラー */
+  border-radius: 0; /* 角を丸めない */
+  overflow: hidden; /* 擬似要素のアニメーションで範囲外を隠す */
+  transition: all 0.3s; /* ホバー時のスムーズな変化 */
+}
+
+
+
+div.Recruitment a.btn-border:before,
+div.Recruitment a.btn-border:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px; /* 枠線の厚さ */
+  background: #000; /* 枠線の色 */
+  transition: all 0.3s; /* ホバー時のスムーズな変化 */
+}
+
+div.Recruitment a.btn-border:before {
+  top: 0;
+  left: 0;
+}
+
+div.Recruitment a.btn-border:after {
+  right: 0;
+  bottom: 0;
+}
+
+div.Recruitment a.btn-border:hover:before,
+div.Recruitment a.btn-border:hover:after {
+  width: 0; /* ホバー時に枠線を消す */
+}
+
+.disabled_btn {
+  background-color: #ccc;
+  color: #666;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  margin: 4px auto; /* 上下マージンは4px、左右はautoで中央配置 */
+  cursor: not-allowed;
+  opacity: 0.6;
+  border-radius: 5px; /* 5pxの丸角 */
+}

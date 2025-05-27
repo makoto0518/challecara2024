@@ -1,0 +1,49 @@
+
+    // 募集内容を取得する (検索機能)
+    //2024 10/22 $recruitTagを$recruitRoleに変更
+    function getRecruit( $recruitRole, $searchWord, $searchOp ) {    // $searchOp: 0...OR 検索 1...AND検索
+        global $pdo;
+        $searchOpSub = ["OR", "AND"];
+
+        if($searchOp != 0 && $searchOp != 1){   // $searchOpが0か1でないとき、errorを返す
+            return "error";
+        }
+
+        // 検索ワードをスペースで分割する
+        $searchWordReplaced = str_replace('　', ' ', $searchWord);  // 全角スペースを半角スペースに置換する
+        $wordArray = array();
+        $wordArray = explode(' ', $searchWordReplaced);             // 半角スペースで分割し、wordArray配列に入れる
+
+        // 検索ワードの配列をSQLの形に変形
+        $wordNum = count($wordArray);
+        $sqlWordTitle = $sqlWordContent = "";
+
+        for($i = 0; $i < $wordNum; $i++){
+            $sqlWordTitle .= "recruit_title LIKE :title" . $i . ' ' . $searchOpSub[$searchOp] . ' ';
+            $sqlWordContent .= "recruit_content LIKE :content" . $i . ' ' . $searchOpSub[$searchOp] . ' ';
+        }
+
+        $sqlWordTitle = substr($sqlWordTitle, 0, -4);
+        $sqlWordContent = substr($sqlWordContent, 0, -4);
+
+        try {
+            //2024 10/22 recruit_status = 1という条件を加えた
+            $sql = "SELECT * FROM recruit WHERE recruit_role = :recruitRole AND recruit_status = 1" . " AND (". $sqlWordTitle . " OR " . $sqlWordContent . ') ORDER BY recruit_num DESC';
+            $sth = $pdo->prepare($sql);
+            $sth->bindValue(":recruitRole", $recruitRole);
+            for ($i = 0; $i < $wordNum; $i++) {
+                $sth->bindValue(":title{$i}", '%' . $wordArray[$i] . '%');
+                $sth->bindValue(":content{$i}", '%' . $wordArray[$i] . '%');
+            }
+            $sth->execute();
+            $result = $sth->fetchALL( PDO::FETCH_ASSOC );       // fetchALL関数で$resultに,クエリを実行して得られたデータを入れる
+    
+            if(count($result) < 1){     // $resultに何もデータが入っていない時
+                return null;            // nullを返す
+            }else{
+                return $result;
+            }
+        } catch(PDOException $e) {
+            echo "クエリ実行エラー: " . $e->getMessage();
+        }
+    }

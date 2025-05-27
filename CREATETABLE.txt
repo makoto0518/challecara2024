@@ -1,0 +1,47 @@
+CREATE DATABASE connecre;
+
+USE connecre;
+
+CREATE TABLE userinfo(
+    num INT PRIMARY KEY AUTO_INCREMENT, 
+    id VARCHAR(30) UNIQUE, 
+    pw VARCHAR(30), 
+    name VARCHAR(30), 
+    creator_tag TINYINT, 
+    profile_content VARCHAR(1000), 
+    icon VARCHAR(500)
+);
+
+CREATE TABLE recruit(
+    recruit_num INT PRIMARY KEY AUTO_INCREMENT,
+    recruit_datetime DATETIME,
+    recruiter_id VARCHAR(30),
+    recruit_title VARCHAR(100),
+    recruit_tag TINYINT,
+    invitation_url VARCHAR(500),
+    recruit_content VARCHAR(1000),
+    recruit_status TINYINT DEFAULT 1
+);
+
+CREATE TABLE apply(
+    apply_num INT PRIMARY KEY AUTO_INCREMENT,
+    recruit_num INT,
+    apply_datetime DATETIME,
+    applicant_id VARCHAR(30),
+    apply_content VARCHAR(1000),
+    apply_status TINYINT DEFAULT 1
+);
+
+CREATE TABLE works(
+    work_num INT PRIMARY KEY AUTO_INCREMENT,
+    work_id VARCHAR(30),
+    work_title VARCHAR(50),
+    work_url VARCHAR(500),
+    work_discription VARCHAR(1000)
+);
+
+
+INSERT INTO userinfo (id, pw, name, creator_tag, profile_content, icon) VALUES
+('user1', '1', '山田', 1, '山田です。よろしくお願いします。', 'icon1.png'),
+('user2', '2', '佐藤', 0, '佐藤と申します。', 'icon2.png'),
+('user3', '3', '田中', 1, '田中だよ。', 'icon3.png');
