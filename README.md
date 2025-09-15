@@ -8,11 +8,12 @@
 
 ## 動作方法
 
-1. **WampServer** をダウンロード・インストール  
-2. WampServer の MySQL で `CREATETABLE.sql` を実行し、必要なデータベースを構築  
-3. テスト用データ `connecre.sql` や `jam.sql` を実行すると、データベースにテストデータが挿入される
-4. login.phpを実行
-5. 詳しい使い方は **ConneCre資料.pdf** を参照  
+1. **WampServer** をダウンロード・インストール
+2. WampServerを実行
+3. WampServer の MySQL で `CREATETABLE.sql` を実行し、必要なデータベースを構築  
+4. テスト用データ `connecre.sql` や `jam.sql` を実行すると、データベースにテストデータが挿入される
+5. http://localhost/login.phpを実行 自分の場合、http://localhost/ConneCre_2/login.php 
+6. 詳しい使い方は **ConneCre資料.pdf** を参照  
 
 ---
 
