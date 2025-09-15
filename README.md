@@ -11,7 +11,8 @@
 1. **WampServer** をダウンロード・インストール  
 2. WampServer の MySQL で `CREATETABLE.sql` を実行し、必要なデータベースを構築  
 3. テスト用データ `connecre.sql` や `jam.sql` を実行すると、データベースにテストデータが挿入される
-4. 詳しい使い方は **ConneCre資料.pdf** を参照  
+4. login.phpを実行
+5. 詳しい使い方は **ConneCre資料.pdf** を参照  
 
 ---
 
